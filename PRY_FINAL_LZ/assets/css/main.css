@@ -918,6 +918,117 @@ section,
   justify-content: center;
 }
 
+.featured-video {
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 10px
+    );
+    z-index: 1;
+}
+
+.featured-video .container {
+    position: relative;
+    z-index: 2;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        color-mix(in srgb, var(--accent-color), transparent 95%) 100%
+    );
+    opacity: 0.3;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.cta-button:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 15%) !important;
+    color: var(--contrast-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.video-title {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.video-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .featured-video .content-wrapper {
+        padding-left: 0 !important;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .video-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .video-features {
+        justify-content: center;
+    }
+    
+    .feature-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .video-description {
+        font-size: 1rem !important;
+    }
+}
 @media (max-width: 991px) {
   .hero .visual-content {
     flex-direction: column;
