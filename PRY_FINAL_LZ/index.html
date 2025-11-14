@@ -38,12 +38,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#portfolio">Galería</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="./index.html" class="active">Inicio</a></li>
+          <li><a href="./views/nosotros.html" onclick="fn_cargarPagina(event,this.href)">Nosotros</a></li>
+          <li><a href="./views/servicios.html" onclick="fn_cargarPagina(event,this.href)">Servicios</a></li>
+          <li><a href="./views/galeria.html" onclick="fn_cargarPagina(event,this.href)">Galería</a></li>
+          <li><a href="./views/testimonios.html" onclick="fn_cargarPagina(event,this.href)">Testimonios</a></li>
+          <li><a href="./views/contacto.html" onclick="fn_cargarPagina(event,this.href)">Contacto</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -53,7 +53,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main-content">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
@@ -108,329 +108,8 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Nosotros</h2>
-        <div><span>Conoce más</span> <span class="description-title">Sobre Nosotros</span></div>
-      </div>
-
-      <div class="container">
-
-        <div class="row gx-5 align-items-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-image position-relative">
-              <img src="assets/img/about/about-portrait-1.webp" class="img-fluid rounded-4 shadow-sm" alt="Lizeth Zaldumbide" loading="lazy">
-              <div class="experience-badge">
-                <span class="years">15+</span>
-                <span class="text">Años de Experiencia</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <h2>Transformamos eventos en momentos mágicos e inolvidables</h2>
-              <p class="lead">Nos especializamos en crear experiencias únicas llenas de alegría, color y diversión para toda la familia.</p>
-              <p>Con más de 15 años de experiencia, ofrecemos animación profesional, decoración espectacular con globos y shows que encantarán a niños y adultos. Cada detalle está diseñado con amor y dedicación para que tu celebración sea perfecta.</p>
-
-              <div class="row g-4 mt-3">
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <h5>Servicio Personalizado</h5>
-                    <p>Adaptamos cada evento según tus necesidades y preferencias para crear una experiencia única.</p>
-                  </div>
-                </div>
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
-                  <div class="feature-item">
-                    <i class="bi bi-lightbulb-fill"></i>
-                    <h5>Creatividad e Innovación</h5>
-                    <p>Decoraciones originales y shows interactivos que sorprenderán a todos tus invitados.</p>
-                  </div>
-                </div>
-              </div>
-
-              <a href="#services" class="btn btn-primary mt-4">Explora Nuestros Servicios</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="row">
-            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
-              <div class="testimonial-intro">
-                <h3>Lo Que Dicen Nuestros Clientes</h3>
-                <p>Testimonios reales de familias que han disfrutado de nuestros servicios y han creado recuerdos inolvidables.</p>
-                <div class="swiper-nav-buttons mt-4">
-                  <button class="slider-prev"><i class="bi bi-arrow-left"></i></button>
-                  <button class="slider-next"><i class="bi bi-arrow-right"></i></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
-              <div class="testimonial-slider swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 800,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "slidesPerView": 1,
-                    "spaceBetween": 30,
-                    "navigation": {
-                      "nextEl": ".slider-next",
-                      "prevEl": ".slider-prev"
-                    },
-                    "breakpoints": {
-                      "768": {
-                        "slidesPerView": 2
-                      }
-                    }
-                  }
-                </script>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="rating mb-3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>"¡Increíble! La decoración de globos superó nuestras expectativas. Los arcos quedaron espectaculares y los niños se divirtieron muchísimo con la animación."</p>
-                      <div class="client-info d-flex align-items-center mt-4">
-                        <img src="assets/img/person/person-f-1.webp" class="client-img" alt="Cliente" loading="lazy">
-                        <div>
-                          <h6 class="mb-0">María González</h6>
-                          <span>Cumpleaños Infantil</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="rating mb-3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>"Excelente servicio para nuestro baby shower. Lizeth es muy profesional y creativa. Los detalles fueron hermosos y todo salió perfecto."</p>
-                      <div class="client-info d-flex align-items-center mt-4">
-                        <img src="assets/img/person/person-f-2.webp" class="client-img" alt="Cliente" loading="lazy">
-                        <div>
-                          <h6 class="mb-0">Andrea Ruiz</h6>
-                          <span>Baby Shower</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="rating mb-3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>"Los shows de magia y títeres fueron lo mejor de la fiesta. Los niños quedaron encantados y los padres también. ¡100% recomendado!"</p>
-                      <div class="client-info d-flex align-items-center mt-4">
-                        <img src="assets/img/person/person-m-1.webp" class="client-img" alt="Cliente" loading="lazy">
-                        <div>
-                          <h6 class="mb-0">Carlos Mendoza</h6>
-                          <span>Fiesta Infantil</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="rating mb-3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>"Contratamos el servicio completo para el agasajo navideño de nuestra empresa y fue un éxito total. Calidad, puntualidad y alegría garantizadas."</p>
-                      <div class="client-info d-flex align-items-center mt-4">
-                        <img src="assets/img/person/person-f-3.webp" class="client-img" alt="Cliente" loading="lazy">
-                        <div>
-                          <h6 class="mb-0">Patricia Flores</h6>
-                          <span>Evento Corporativo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Servicios</h2>
-        <div><span>Conoce</span> <span class="description-title">Nuestros Servicios</span></div>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="service-header">
-          <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12">
-              <div class="service-intro">
-                <h2 class="service-heading">
-                  <div>Soluciones creativas</div>
-                  <div><span>para eventos inolvidables</span></div>
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="service-summary">
-                <p>
-                  Ofrecemos decoración espectacular con globos, animación profesional con shows interactivos y paquetes personalizados para hacer de tu celebración un momento mágico que todos recordarán.
-                </p>
-                <a href="service-details.html" class="service-btn">
-                  Ver Todos los Servicios
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-balloon"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Decoración con <span>Globos</span>
-                </a>
-              </h3>
-              <p>
-                Arcos espectaculares, aros decorativos personalizados, bouquets elegantes y detalles encantadores para cumpleaños, graduaciones, bautizos y más.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-stars"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Animación <span>Infantil</span>
-                </a>
-              </h3>
-              <p>
-                Fiestas infantiles dinámicas con concursos, juegos, música y diversión garantizada. Entretenimiento profesional para todas las edades.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-magic"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Shows de <span>Magia</span>
-                </a>
-              </h3>
-              <p>
-                Espectáculos de magia que sorprenden y fascinan. Trucos increíbles que dejarán a todos con la boca abierta.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-heart"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Baby <span>Showers</span>
-                </a>
-              </h3>
-              <p>
-                Decoración y animación especial para baby showers y revelación de género. Hacemos de este momento algo único y memorable.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-emoji-smile"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Títeres y <span>Burbujas</span>
-                </a>
-              </h3>
-              <p>
-                Shows de títeres llenos de diversión y espectáculos de burbujas que encantan a grandes y chicos por igual.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-tree-fill"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Agasajos <span>Navideños</span>
-                </a>
-              </h3>
-              <p>
-                Eventos empresariales y familiares con temática navideña. Decoración festiva y animación especial para celebrar la temporada.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
+    
+    
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
 
@@ -659,8 +338,8 @@
                         <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery-globos" data-glightbox="title: Arco de Globos; description: Hermoso arco de globos para cumpleaños">
                           <i class="bi bi-arrows-angle-expand"></i>
                         </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
+                        <a href="./portfolio-details.html">
+                          <i class="bi bi-arrow-right"></i> 
                         </a>
                       </div>
                     </div>
@@ -904,6 +583,8 @@
         </div>
       </div>
     </section><!-- /Faq Section -->
+    
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1104,6 +785,21 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+      function fn_cargarPagina(event, url) {
+      event.preventDefault();
+      const main = document.getElementById("main-content");
+
+      fetch(url)
+          .then(response => response.text())
+          .then(html => main.innerHTML = html)
+          
+      }
+
+
+
+  </script>
 
 </body>
 
