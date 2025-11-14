@@ -1,0 +1,111 @@
+/* RESET / Protección contra estilos conflictivos */
+.service-tabs .nav {
+    margin-bottom: 1rem;
+}
+
+/* Estilo moderno para las "tabs" -> botones redondeados */
+.service-tabs .nav .nav-link {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.45rem 1.05rem;
+    margin-right: 0.5rem;
+    background: rgba(214, 185, 155, 0.12);
+    /* beige suave */
+    color: #5a3f2b;
+    transition: all .18s ease;
+    box-shadow: none;
+}
+
+.service-tabs .nav .nav-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.98);
+}
+
+.service-tabs .nav .nav-link.active {
+    background: #8f6a4e;
+    /* café */
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(143, 106, 78, 0.18);
+}
+
+/* Ajustes de tarjeta y layout */
+.feature-wrap {
+    background: #fff7f1;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.feature-wrap i {
+    font-size: 28px;
+    color: #8f6a4e;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature-wrap h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #3e2a20;
+}
+
+.feature-wrap h3 {
+    font-size: 14px;
+    color: #6b4f3b;
+    font-weight: 400;
+}
+
+.service-sidebar .action-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.service-sidebar .btn-primary {
+    background: #8f6a4e;
+    border-color: #8f6a4e;
+    color: #fff;
+    padding: .55rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.service-sidebar .guarantee {
+    display: block;
+    margin-top: 8px;
+    color: #6b4f3b;
+    font-weight: 600;
+}
+
+.benefit-card,
+.testimonial-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.benefit-icon {
+    font-size: 22px;
+    color: #8f6a4e;
+    margin-bottom: 8px;
+}
+
+/* Asegura que imágenes no deformen el layout */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile tweaks */
+@media (max-width:767px) {
+    .service-tabs .nav .nav-link {
+        margin-bottom: .5rem;
+    }
+}
