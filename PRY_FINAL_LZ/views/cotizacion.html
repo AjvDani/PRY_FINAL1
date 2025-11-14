@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cotización</title>
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+    .form-section {
+        padding: 40px 0;
+    }
+
+    .form-container {
+        background: #ffe4f0; 
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h2, p, label {
+        color: #333; 
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #999;
+        margin-bottom: 15px;
+        background: #fff;
+        color: #333;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #555;
+    }
+
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ff4f9a;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #e2458a;
+    }
+    </style>
+
+</head>
+<body>
+    <main>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+         <div class="container section-title" data-aos="fade-up">
+            <h2>Cotización</h2>
+            <div><span>Cotiza</span> <span class="description-title">Nuestro Trabajo</span></div>
+        </div>
+        <!-- Form Section -->
+        <section class="form-section" id="cotizacion">
+            <div class="container">
+                <div class="row">
+
+                    
+
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+                        <div class="form-container">
+
+                            <form id="cotizacionForm" action="../server.html">
+
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ejemplo: Ana Torres" maxlength="60">
+
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+
+                                <label for="telefono">Número de teléfono *</label>
+                                <input type="text" id="telefono" name="telefono" required placeholder="0991234567" 
+                                       pattern="^[0-9]{7,10}$" maxlength="10">
+
+                                <label for="password">Crea una contraseña (para seguimiento) *</label>
+                                <input type="password" id="password" name="password" required minlength="6" maxlength="20"
+                                       placeholder="Mínimo 6 caracteres">
+
+                                <label for="tipoEvento">Tipo de evento *</label>
+                                <select id="tipoEvento" name="tipoEvento" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option>Animación infantil</option>
+                                    <option>Arte en globos</option>
+                                    <option>Baby shower</option>
+                                    <option>Revelación de género</option>
+                                    <option>Show de magia</option>
+                                    <option>Concursos y títeres</option>
+                                    <option>Decoración completa</option>
+                                </select>
+
+                                <label for="personas">Número aproximado de invitados *</label>
+                                <input type="number" id="personas" name="personas" min="1" max="500" required placeholder="Ej: 25">
+
+                                <label for="fecha">Fecha del evento *</label>
+                                <input type="date" id="fecha" name="fecha" required>
+
+                                <label for="descripcion">Describe brevemente tu evento *</label>
+                                <textarea id="descripcion" name="descripcion" rows="4" required placeholder="Cuéntanos los detalles..."></textarea>
+
+                                <button type="submit">Enviar cotización</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        
+        document.getElementById("cotizacionForm").addEventListener("submit", function(event) {
+            const telefono = document.getElementById("telefono").value;
+            const patronTelefono = /^[0-9]{7,10}$/;
+
+            if (!patronTelefono.test(telefono)) {
+                alert("El número de teléfono debe contener entre 7 y 10 dígitos.");
+                event.preventDefault();
+            } else {
+                alert("Formulario enviado correctamente. ¡Pronto nos comunicaremos contigo!");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+#carouselExampleIndicators .carousel-item img {
+  width: 200%;
+  height: 280px;     
+  object-fit: cover; 
+  border-radius: 20px; 
+}
